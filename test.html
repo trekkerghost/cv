@@ -1,0 +1,35 @@
+<html>
+<div id="root">
+    <select id="changelang">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+    </select>
+    <div id="renderhtml"></div>
+</div>
+<script>
+    const dataLang = {
+        es: {
+            job: 'Programador Backend',
+            desc: 'Trabaje de Backend'
+        },
+        en: {
+            job: 'Backend Dev',
+            desc: 'Im work with Django'
+        }
+    }
+    const template = (lang) => {
+        const data = dataLang[lang]
+        return `<div>
+                    <h1>${data.job}</h1>
+                    <p>${data.desc}</p>
+                    </div>`
+    }
+    const texttorender = document.getElementById('renderhtml')
+    const select = document.getElementById('changelang').addEventListener('change', function () {
+        texttorender.innerHTML = template(this.value);
+    });
+
+
+</script>
+
+</html>
