@@ -32,8 +32,8 @@
               class="card-header__link-social"><span class="card-header__icon-social fab fa-linkedin"></span></a></li>
         </ul>
         <ul class="card-header__list-social">
-          <li class="card-header__item-social"><span class="langselector" id="es">🇪🇸</span></li>
-          <li class="card-header__item-social"><span class="langselector" id="en">🇺🇸</span></li>
+          <li class="card-header__item-social"><span class="langselector" id="es"><img src="img/spain.png" alt=""></span></li>
+          <li class="card-header__item-social"><span class="langselector" id="en"><img src="img/usa.png" alt=""></span></li>
         </ul>
       </div>
     </div>
@@ -42,38 +42,7 @@
 
     </div>
     <div class="body__experience">
-      <h3 class="body__title">Experience</h3>
-      <div class="card-step__wrapper">
-        <div class="card-step__left">
-          <div class="card-step">
-            <p class="card-step__position">Frontend Developer</p>
-            <p class="card-step__company">Grupo El Comercio <span class="card-step__period">Febr 19 - Current</span></p>
-            <p class="card-step__role">Maintenance and development of web components</p>
-          </div>
-          <div class="card-step">
-            <p class="card-step__position">Frontend Developer</p>
-            <p class="card-step__company">Enova <span class="card-step__period">March 18 - Febr 19</span></p>
-            <p class="card-step__role">Structure, development and design styles for web ecommerce</p>
-          </div>
-          <div class="card-step">
-            <p class="card-step__position">Frontend Developer</p>
-            <p class="card-step__company">Staff Digital <span class="card-step__period">Freelance</span></p>
-            <p class="card-step__role">Structures and styles of web pages</p>
-          </div>
-        </div>
-        <div class="card-step__right">
-          <div class="card-step">
-            <p class="card-step__position">Web Developer</p>
-            <p class="card-step__company">Janome Venezuela <span class="card-step__period">Feb 13 - Feb 15</span></p>
-            <p class="card-step__role">Inventory system and web ecommerce</p>
-          </div>
-          <div class="card-step">
-            <p class="card-step__position">Web Developer</p>
-            <p class="card-step__company">Fudeco<span class="card-step__period">Jun 12 - Dec 12</span></p>
-            <p class="card-step__role">Intranet modules with php and mysql</p>
-          </div>
-        </div>
-      </div>
+      
     </div>
     <div class="body__skill">
       <h3 class="body__title">Tools and skills</h3>
@@ -116,19 +85,44 @@
   <script>
     const dataBio = {
       es: {
-        title: 'Acerca de Mi',
-        desc: 'Trabaje de Backend'
+        title: "Acerca de Mi",
+        desc: "Hi, I hope youre okay, my name is Edward and I am a frontend developer born in Venezuela but living in \
+        Peru, with solid Javascript knowledge using Vue as framework, a bit of mysql, node and php. I like medieval\
+            series and non-fiction books. English level C2"
       },
       en: {
-        job: 'Backend Dev',
+        job: 'About Me',
         desc: 'Im work with Django'
       }
     }
     const dataExperience = {
-      es: {
-        job: 'Programador Backend',
-        desc: 'Trabaje de Backend'
+      es:[ {
+        position: 'Programador Backend',
+        company: 'Trabaje de Backend',
+        period: 'Oct 2010 - Feb 2016',
+        role: 'Dba Junior',
+        tech: "MongoDB"
+      },{
+        position: 'Programador Backend',
+        company: 'Trabaje de Backend',
+        period: 'Oct 2010 - Feb 2016',
+        role: 'Dba Junior',
+        tech: "MongoDB"
       },
+      {
+        position: 'Programador Backend',
+        company: 'Trabaje de Backend',
+        period: 'Oct 2010 - Feb 2016',
+        role: 'Dba Junior',
+        tech: "MongoDB"
+      },
+      {
+        position: 'Programador Backend',
+        company: 'Trabaje de Backend',
+        period: 'Oct 2010 - Feb 2016',
+        role: 'Dba Junior',
+        tech: "MongoDB"
+      }],
       en: {
         job: 'Backend Dev',
         desc: 'Im work with Django'
@@ -140,9 +134,7 @@
       <div class="bio">
         <div class="bio__left">
           <p class="bio__description">
-            Hi, I hope you're okay, my name is Edward and I am a frontend developer born in Venezuela but living in
-            Peru, with solid Javascript knowledge using Vue as framework, a bit of mysql, node and php. I like medieval
-            series and non-fiction books. English level C2
+            ${data.title}
           </p>
         </div>
         <div class="bio__right">
@@ -154,22 +146,47 @@
               B1</span>Italian B1</p>
         </div>
       </div>
-
-
-      <div>
-                    <h1>${data.job}</h1>
-                    <p>${data.desc}</p>
-                    </div>`
+      <div>`
     }
     const templateExperience = (lang) => {
       const data = dataLang[lang]
-      return `<div>
-                    <h1>${data.job}</h1>
-                    <p>${data.desc}</p>
-                    </div>`
+      return `<h3 class="body__title">Experience</h3>
+      <div class="card-step__wrapper">
+        <div class="card-step__left">
+          <div class="card-step">
+            <p class="card-step__position">Frontend Developer</p>
+            <p class="card-step__company">Grupo El Comercio <span class="card-step__period">Febr 19 - Current</span></p>
+            <p class="card-step__role">Maintenance and development of web components</p>
+          </div>
+          <div class="card-step">
+            <p class="card-step__position">Frontend Developer</p>
+            <p class="card-step__company">Enova <span class="card-step__period">March 18 - Febr 19</span></p>
+            <p class="card-step__role">Structure, development and design styles for web ecommerce</p>
+          </div>
+          <div class="card-step">
+            <p class="card-step__position">Frontend Developer</p>
+            <p class="card-step__company">Staff Digital <span class="card-step__period">Freelance</span></p>
+            <p class="card-step__role">Structures and styles of web pages</p>
+          </div>
+        </div>
+        <div class="card-step__right">
+          <div class="card-step">
+            <p class="card-step__position">Web Developer</p>
+            <p class="card-step__company">Janome Venezuela <span class="card-step__period">Feb 13 - Feb 15</span></p>
+            <p class="card-step__role">Inventory system and web ecommerce</p>
+          </div>
+          <div class="card-step">
+            <p class="card-step__position">Web Developer</p>
+            <p class="card-step__company">Fudeco<span class="card-step__period">Jun 12 - Dec 12</span></p>
+            <p class="card-step__role">Intranet modules with php and mysql</p>
+          </div>
+        </div>
+      </div>`
     }
-    const texttorender = document.getElementById('renderhtml')
+    
     function setTextByLanguage(lang){
+      const textbio = document.getElementById('body__bio')
+      const textbio = document.getElementById('body__bio')
       texttorender.innerHTML = template(lang);
     }
 
